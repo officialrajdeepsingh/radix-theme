@@ -11,7 +11,7 @@ export default function Home() {
         }}
       >
         <Container py={"6"}>
-          <Box py="9">
+          <Box py="5">
             <Heading mb={"4"} size={"9"}>Contact us</Heading>
             <Text as="p" size={"4"}>
               Lorem ipsum dolor sit amet, officia excepteur ex fugiat
@@ -19,7 +19,7 @@ export default function Home() {
               ex esse exercitation amet.
             </Text>
           </Box>
-          <Box pb={"9"}>
+          <Box pb={"5"}>
             <Button size={"3"}>
               <EnvelopeOpenIcon width="16" height="16" /> Email
             </Button>
