@@ -1,5 +1,6 @@
 import { ImageCard } from "@/components/Card/ImageCard";
 import { Box, Button, Card, Container, Flex, Heading, Text } from "@radix-ui/themes";
+
 export default function Home() {
   return (
     <>
@@ -11,15 +12,15 @@ export default function Home() {
       >
         <Container py={"6"}>
           <Flex direction={"column"}>
-            <Heading as="h1" mb={"4"} size={"6"}>
+            <Heading as="h1" mb={"4"} size={"7"}>
               Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
               sint cillum sint consectetur cupidatat.
             </Heading>
             <Text as="p" size={"4"}>
               Qui minim labore adipisicing minim sint
             </Text>
-            <Box mt={"3"}>
-              <Button size={"3"}>Learn</Button>
+            <Box mt={"6"}>
+              <Button size={"3"}>Learn More</Button>
             </Box>
           </Flex>
         </Container>
