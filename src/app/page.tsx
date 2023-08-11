@@ -1,29 +1,34 @@
-import { Button,Text, Flex, Code } from '@radix-ui/themes'
-import Image from 'next/image'
-
+import { ImageCard } from "@/components/Card/ImageCard";
+import { Box, Button, Card, Container, Flex, Heading, Text } from "@radix-ui/themes";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-  
-<Flex direction="column" gap="2">
-      <Text>Hello from Radix Themes :)</Text>
-      <Button>Let's go</Button>
-    </Flex>
-      <Flex direction="column" gap="3" align="start">
-  <Code size="9">
-{`<Box width="9" height="9">
-  <DecorativeBox />
-</Box>`}
-  </Code>
-  <Code size="8">console.log()</Code>
-  <Code size="7">console.log()</Code>
-  <Code size="6">console.log()</Code>
-  <Code size="5">console.log()</Code>
-  <Code size="4">console.log()</Code>
-  <Code size="3">console.log()</Code>
-  <Code size="2">console.log()</Code>
-  <Code size="1">console.log()</Code>
-</Flex>
-    </main>
-  )
+    <>
+      <Card
+        my={"7"}
+        variant="classic"
+        size={"4"}
+        style={{ borderRadius: "0" }}
+      >
+        <Container py={"6"}>
+          <Flex direction={"column"}>
+            <Heading as="h1" mb={"4"} size={"6"}>
+              Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+              sint cillum sint consectetur cupidatat.
+            </Heading>
+            <Text as="p" size={"4"}>
+              Qui minim labore adipisicing minim sint
+            </Text>
+            <Box mt={"3"}>
+              <Button size={"3"}>Learn</Button>
+            </Box>
+          </Flex>
+        </Container>
+      </Card>
+      <Container>
+        <ImageCard variant="surface" />
+        <ImageCard variant="ghost" />
+        <ImageCard variant="classic" />
+      </Container>
+    </>
+  );
 }
