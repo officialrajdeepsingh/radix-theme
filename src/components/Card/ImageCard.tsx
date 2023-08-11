@@ -1,4 +1,3 @@
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import {
   AspectRatio,
   Box,
@@ -7,7 +6,7 @@ import {
   Flex,
   Heading,
   Inset,
-  Text,
+  Text
 } from "@radix-ui/themes";
 import Image from "next/image";
 export function ImageCard(
