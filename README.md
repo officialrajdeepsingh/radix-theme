@@ -1,6 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# How to install Radix Themes in the Next.js App Router?
+## Install and set up the Radix themes.
+Understand the installation process of Radix Themes in the nextjs app router, [then check out my article](https://medium.com/frontendweb/how-to-install-material-ui-in-the-next-js-with-the-app-router-10d2a60e41f2).
+
+## installation
+
+### Clone the project
+```bash
+git clone https://github.com/officialrajdeepsingh/radix-theme.git
+```
+### Change the folder 
+```bash
+cd radix-theme
+```
+
+### Install the node package
+```bash
+npm install
+# or
+pnpm install
+# or
+yarn install
+```
 
 First, run the development server:
 
@@ -14,21 +35,28 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can edit the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Note
+Remove the following code when you start your local development server. The following code only works when you deploy your site on the GitHub page.
 
-## Learn More
+```javascript
+// next.config.js
 
-To learn more about Next.js, take a look at the following resources:
+/** @type {import('next').NextConfig} */
+let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
+const nextConfig = {
+  output:  process.env.NODE_ENV !== "production" ? undefined: "export",
+  images: {
+    unoptimized: envImageUnoptimize,
+    remotePatterns: [
+      {
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
+};
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+module.exports = nextConfig;
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
