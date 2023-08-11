@@ -1,6 +1,5 @@
 
 # How to install Radix Themes in the Next.js App Router?
-## Install and set up the Radix themes.
 Understand the installation process of Radix Themes in the nextjs app router, [then check out my article](https://medium.com/frontendweb/how-to-install-radix-themes-in-the-next-js-app-router-97b41425ac9b).
 
 ## installation
